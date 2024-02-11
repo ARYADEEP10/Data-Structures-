@@ -6,14 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class PizzaApp extends JFrame {
+    //initialising the variable for price
 
     private double totalPrice = 0.0;
 
     public PizzaApp() {
+        // setting the titles and making sure of the dimensions of the button
         setTitle("Pizza Builder");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(5, 2));
+
+        //Creating all the labels as needed
 
         JLabel sizeLabel = new JLabel("Select the Size:");
         add(sizeLabel);
@@ -23,7 +27,7 @@ public class PizzaApp extends JFrame {
 
         JLabel toppingsLabel = new JLabel("Select Toppings:");
         add(toppingsLabel);
-
+    //Creating the checkboxes
         JCheckBox pepperoniCheckBox = new JCheckBox("Pepperoni");
         add(pepperoniCheckBox);
 
@@ -42,7 +46,8 @@ public class PizzaApp extends JFrame {
 
         JButton calculateButton = new JButton("Calculate Total Bill");
         add(calculateButton);
-
+        
+    //Making a reset button for reordering the pizza again
         JButton resetButton = new JButton("Reset");
         add(resetButton);
 
